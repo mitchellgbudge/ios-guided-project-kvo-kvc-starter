@@ -67,6 +67,7 @@
     
     NSLog(@"%@", self.hrController);
     
+    NSLog(@"All employees: %@", self.hrController.allEmployees);
     
 }
 

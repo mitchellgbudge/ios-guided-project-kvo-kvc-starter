@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addDepartment:(LSIDepartment *)department;
 
 @property (nonatomic, copy, readonly) NSArray<LSIDepartment *> *departments;
+@property (nonatomic, copy, readonly) NSArray<LSIEmployee *> *allEmployees;
 
 @end
 

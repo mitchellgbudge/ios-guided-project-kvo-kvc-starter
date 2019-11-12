@@ -33,6 +33,13 @@
     return [self.internalDepartments copy];
 }
 
+- (NSArray <LSIEmployee *> *)allEmployees {
+    NSMutableArray<LSIEmployee *> *allEmployees = [[NSMutableArray alloc] init];
+    for (LSIDepartment *department in self.departments) {
+        [allEmployees addObjectsFromArray:department.employees];
+    }
+    return allEmployees;
+}
 
 
 - (NSString *)description {
