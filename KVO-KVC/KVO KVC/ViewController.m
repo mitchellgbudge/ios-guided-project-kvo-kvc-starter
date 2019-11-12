@@ -69,6 +69,13 @@
     
     NSLog(@"All employees: %@", self.hrController.allEmployees);
     
+    NSLog(@"%@\n", [self.hrController valueForKeyPath:@"departments"]); // print departments
+    
+    NSLog(@"%@\n", [self.hrController valueForKeyPath:@"departments.employees"]); // print employees
+    
+    NSLog(@"%@\n", [self.hrController valueForKeyPath:@"departments.@distinctUnionOfArrays.employees"]); // print all employees a bit better
+    
+    
 }
 
 

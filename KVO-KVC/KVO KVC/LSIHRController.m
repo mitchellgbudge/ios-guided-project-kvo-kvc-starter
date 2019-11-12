@@ -34,11 +34,7 @@
 }
 
 - (NSArray <LSIEmployee *> *)allEmployees {
-    NSMutableArray<LSIEmployee *> *allEmployees = [[NSMutableArray alloc] init];
-    for (LSIDepartment *department in self.departments) {
-        [allEmployees addObjectsFromArray:department.employees];
-    }
-    return allEmployees;
+    return [self valueForKeyPath:@"departments.@distinctUnionOfArrays.employees"];
 }
 
 
